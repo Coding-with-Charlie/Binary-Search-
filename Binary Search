@@ -1,0 +1,33 @@
+#include <stdio.h>
+int binary(int a[], int lt, int rt, int k)
+{
+if (rt >= lt) {
+int mid = lt + (rt - l) / 2;
+// check If element is at the middle
+if (a[mid] == k)
+return mid;
+//check if element is at the left side of mid
+if (a[mid] > x)
+return binary(a, lt, mid - 1, k);
+// Else element is at the right side of mid
+return binary(a, mid + 1, rt, k);
+}
+// if element not found
+return -1;
+}
+int main()
+{
+int a[] = { 2, 3, 5, 7, 11 };
+int n = sizeof(a) / sizeof(a[0]);
+int k = 11;
+int res = binary(arr, 0, n - 1, k);
+if(res == -1) 
+{
+printf("Element is not found")
+}
+else
+{
+printf("Element found at index %d",res);
+}
+return 0;
+}
